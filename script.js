@@ -2,7 +2,7 @@ const LANGUAGE_KEY = "ivy187-language";
 const yearNode = document.querySelector("#year");
 const revealNodes = document.querySelectorAll("[data-reveal]");
 const languageNodes = document.querySelectorAll("[data-lang-content]");
-const languageButtons = document.querySelectorAll("[data-lang-option]");
+const languageButtons = document.querySelectorAll("[data-lang-toggle]");
 const titleNode = document.querySelector("title[data-title-zh][data-title-en]");
 const descriptionNode = document.querySelector(
   'meta[name="description"][data-description-zh][data-description-en]'
@@ -46,9 +46,16 @@ const applyLanguage = (language) => {
   });
 
   languageButtons.forEach((button) => {
-    const isActive = button.dataset.langOption === currentLanguage;
-    button.classList.toggle("is-active", isActive);
-    button.setAttribute("aria-pressed", isActive ? "true" : "false");
+    const label = currentLanguage === "zh" ? "中文" : "EN";
+    button.textContent = label;
+    button.setAttribute(
+      "aria-label",
+      currentLanguage === "zh" ? "切换到英文" : "Switch to Chinese"
+    );
+    button.setAttribute(
+      "title",
+      currentLanguage === "zh" ? "切换到英文" : "Switch to Chinese"
+    );
   });
 
   if (titleNode) {
@@ -76,7 +83,7 @@ applyLanguage(getInitialLanguage());
 
 languageButtons.forEach((button) => {
   button.addEventListener("click", () => {
-    applyLanguage(button.dataset.langOption);
+    applyLanguage(currentLanguage === "zh" ? "en" : "zh");
   });
 });
 
