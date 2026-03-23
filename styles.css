@@ -116,24 +116,40 @@ a {
   font-size: 0.95rem;
 }
 
-.lang-toggle {
-  min-height: 42px;
-  padding: 0 14px;
+.lang-switch {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px;
   border: 1px solid var(--line);
   border-radius: 999px;
   background: rgba(255, 250, 242, 0.88);
-  color: var(--ink);
+  box-shadow: 0 10px 30px rgba(58, 38, 19, 0.08);
+}
+
+.lang-option {
+  min-width: 60px;
+  min-height: 34px;
+  padding: 0 14px;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--muted);
   font: inherit;
   font-weight: 700;
   cursor: pointer;
   transition:
     background-color 0.2s ease,
+    color 0.2s ease,
     transform 0.2s ease;
 }
 
-.lang-toggle:hover {
-  background: rgba(245, 236, 220, 0.96);
-  transform: translateY(-1px);
+.lang-option:hover {
+  color: var(--ink);
+}
+
+.lang-option.is-active {
+  background: var(--ink);
+  color: #fdf8f1;
 }
 
 .hero,

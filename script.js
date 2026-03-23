@@ -2,7 +2,7 @@ const LANGUAGE_KEY = "ivy187-language";
 const yearNode = document.querySelector("#year");
 const revealNodes = document.querySelectorAll("[data-reveal]");
 const languageNodes = document.querySelectorAll("[data-lang-content]");
-const toggleButtons = document.querySelectorAll("[data-lang-toggle]");
+const languageButtons = document.querySelectorAll("[data-lang-option]");
 const titleNode = document.querySelector("title[data-title-zh][data-title-en]");
 const descriptionNode = document.querySelector(
   'meta[name="description"][data-description-zh][data-description-en]'
@@ -32,9 +32,7 @@ const getInitialLanguage = () => {
   if (stored) {
     return stored;
   }
-
-  const browserLanguage = window.navigator.language.toLowerCase();
-  return browserLanguage.startsWith("zh") ? "zh" : "en";
+  return "zh";
 };
 
 const applyLanguage = (language) => {
@@ -47,17 +45,10 @@ const applyLanguage = (language) => {
     node.hidden = node.dataset.langContent !== currentLanguage;
   });
 
-  toggleButtons.forEach((button) => {
-    const nextLabel = currentLanguage === "zh" ? "EN" : "中文";
-    button.textContent = nextLabel;
-    button.setAttribute(
-      "aria-label",
-      currentLanguage === "zh" ? "Switch to English" : "切换到中文"
-    );
-    button.setAttribute(
-      "title",
-      currentLanguage === "zh" ? "Switch to English" : "切换到中文"
-    );
+  languageButtons.forEach((button) => {
+    const isActive = button.dataset.langOption === currentLanguage;
+    button.classList.toggle("is-active", isActive);
+    button.setAttribute("aria-pressed", isActive ? "true" : "false");
   });
 
   if (titleNode) {
@@ -83,9 +74,9 @@ if (yearNode) {
 
 applyLanguage(getInitialLanguage());
 
-toggleButtons.forEach((button) => {
+languageButtons.forEach((button) => {
   button.addEventListener("click", () => {
-    applyLanguage(currentLanguage === "zh" ? "en" : "zh");
+    applyLanguage(button.dataset.langOption);
   });
 });
 
