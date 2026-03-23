@@ -183,14 +183,6 @@ a {
   max-width: none;
 }
 
-.hero-single h1 {
-  max-width: none;
-  font-size: clamp(2.6rem, 3.5vw, 3.5rem);
-  white-space: normal;
-  text-wrap: balance;
-  overflow-wrap: anywhere;
-}
-
 .hero-single .lede {
   max-width: none;
 }
@@ -219,6 +211,14 @@ a {
 .hero h1 {
   max-width: 11ch;
   font-size: clamp(2.8rem, 7vw, 5.5rem);
+}
+
+.hero.hero-single h1 {
+  max-width: none;
+  font-size: clamp(2.8rem, 4.4vw, 4.5rem);
+  white-space: normal;
+  text-wrap: pretty;
+  overflow-wrap: normal;
 }
 
 .lede {
