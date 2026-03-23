@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>组织名 | 自己的平台</title>
+    <meta
+      name="description"
+      content="一个适合小组织长期发布内容、沉淀观点与行动记录的 GitHub Pages 站点骨架。"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="topbar">
+        <a class="brand" href="#top" aria-label="回到首页">
+          <span class="brand-mark">01</span>
+          <span class="brand-text">
+            <strong>组织名</strong>
+            <small>Own Your Platform</small>
+          </span>
+        </a>
+        <nav class="nav">
+          <a href="#latest">最近发布</a>
+          <a href="#focus">内容方向</a>
+          <a href="#about">我们是谁</a>
+          <a href="#join">参与方式</a>
+        </nav>
+      </header>
+
+      <main id="top">
+        <section class="hero" data-reveal>
+          <div class="hero-copy">
+            <p class="eyebrow">独立发布阵地</p>
+            <h1>把内容放回自己的地基上。</h1>
+            <p class="lede">
+              这个站点骨架适合小组织发布声明、文章、活动记录、研究笔记和长期专题。
+              它不依赖算法分发，也不把历史内容埋进时间线里。
+            </p>
+            <div class="hero-actions">
+              <a class="button button-solid" href="#latest">查看最新内容</a>
+              <a class="button button-ghost" href="posts/template.html">使用文章模板</a>
+            </div>
+          </div>
+
+          <aside class="hero-panel">
+            <div class="panel-card">
+              <span>发布方式</span>
+              <strong>纯静态站点</strong>
+              <p>不依赖数据库，不需要服务器，推送到 GitHub 就能上线。</p>
+            </div>
+            <div class="panel-grid">
+              <div class="panel-mini">
+                <span>01</span>
+                <p>更新成本低</p>
+              </div>
+              <div class="panel-mini">
+                <span>02</span>
+                <p>支持自定义域名</p>
+              </div>
+              <div class="panel-mini">
+                <span>03</span>
+                <p>内容长期可归档</p>
+              </div>
+              <div class="panel-mini">
+                <span>04</span>
+                <p>结构完全可改</p>
+              </div>
+            </div>
+          </aside>
+        </section>
+
+        <section class="section" id="latest">
+          <div class="section-heading" data-reveal>
+            <p class="eyebrow">Recent Notes</p>
+            <h2>最近发布</h2>
+            <p>
+              下面放了两篇示例文章，既可以当占位内容，也可以作为后续发文的结构参考。
+            </p>
+          </div>
+
+          <div class="post-grid">
+            <article class="post-card" data-reveal>
+              <p class="post-meta">2026.03.23 · 创刊词</p>
+              <h3>我们为什么要把内容放回自己的平台</h3>
+              <p>
+                解释这个站点存在的原因：不追逐平台波动，而是建立一处可查找、可引用、可持续维护的公开空间。
+              </p>
+              <a href="posts/own-platform.html">阅读全文</a>
+            </article>
+
+            <article class="post-card" data-reveal>
+              <p class="post-meta">2026.03.23 · 站点说明</p>
+              <h3>这个网站将发布什么，不发布什么</h3>
+              <p>
+                给访问者一个预期：这里会记录哪些内容、采用什么语气、如何保持更新节奏，以及如何联系组织。
+              </p>
+              <a href="posts/launch-note.html">阅读全文</a>
+            </article>
+          </div>
+        </section>
+
+        <section class="section manifesto" id="focus">
+          <div class="section-heading narrow" data-reveal>
+            <p class="eyebrow">Publishing Scope</p>
+            <h2>适合长期沉淀的内容方向</h2>
+          </div>
+
+          <div class="focus-list">
+            <article data-reveal>
+              <span>01</span>
+              <h3>公开声明</h3>
+              <p>适合发布立场、倡议、阶段总结和对外说明，便于集中引用。</p>
+            </article>
+            <article data-reveal>
+              <span>02</span>
+              <h3>活动记录</h3>
+              <p>把线上线下活动、读书会、研讨会或项目阶段成果整理成可检索页面。</p>
+            </article>
+            <article data-reveal>
+              <span>03</span>
+              <h3>研究与档案</h3>
+              <p>专题资料、案例索引、问题梳理、参考文献清单，都适合沉淀在这里。</p>
+            </article>
+            <article data-reveal>
+              <span>04</span>
+              <h3>协作入口</h3>
+              <p>投稿、加入、联系、捐助或项目参与方式，可以集中在一个明确页面。</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section" id="about">
+          <div class="split-panel" data-reveal>
+            <div>
+              <p class="eyebrow">About</p>
+              <h2>一个小组织，不需要复杂系统，也可以有自己的正式站点。</h2>
+            </div>
+            <div>
+              <p>
+                你只需要把仓库放到 GitHub，上线 GitHub Pages，这个站点就能作为组织的公开首页。
+                后续如果想加自定义域名、成员页、文章归档、双语页面，都可以继续扩展。
+              </p>
+              <p>
+                现在这套结构是刻意保持简洁的：先能稳定发布，再逐步加功能，而不是一开始就被技术栈拖住。
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="join">
+          <div class="contact-card" data-reveal>
+            <div>
+              <p class="eyebrow">Join / Contact</p>
+              <h2>把这里改成你们自己的联系方式。</h2>
+            </div>
+            <div class="contact-list">
+              <a href="mailto:hello@your-org.org">hello@your-org.org</a>
+              <a href="https://github.com/your-org">github.com/your-org</a>
+              <a href="#">投稿入口 / 活动报名 / 成员申请</a>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <p>© <span id="year"></span> 组织名. Built for GitHub Pages.</p>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
