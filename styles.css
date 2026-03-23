@@ -164,6 +164,7 @@ a {
 
 .hero-copy,
 .hero-panel,
+.channels-card,
 .split-panel,
 .contact-card,
 .post-card,
@@ -291,6 +292,17 @@ a {
   display: grid;
   gap: 10px;
   margin-bottom: 20px;
+}
+
+.channels-card {
+  display: grid;
+  gap: 24px;
+  padding: 30px;
+  border-radius: var(--radius-lg);
+}
+
+.channels-card .section-heading {
+  margin-bottom: 0;
 }
 
 .section-heading h2,
@@ -501,6 +513,7 @@ a {
 
   .hero-copy,
   .hero-panel,
+  .channels-card,
   .split-panel,
   .contact-card,
   .post-card,
