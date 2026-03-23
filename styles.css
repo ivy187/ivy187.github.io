@@ -158,6 +158,10 @@ a {
   padding: 42px 0 30px;
 }
 
+.hero-single {
+  grid-template-columns: 1fr;
+}
+
 .hero-copy,
 .hero-panel,
 .split-panel,
@@ -173,6 +177,10 @@ a {
 .hero-copy {
   padding: 44px;
   border-radius: var(--radius-lg);
+}
+
+.hero-single .hero-copy {
+  max-width: none;
 }
 
 .eyebrow {
