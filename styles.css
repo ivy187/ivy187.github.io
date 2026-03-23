@@ -183,6 +183,16 @@ a {
   max-width: none;
 }
 
+.hero-single h1 {
+  max-width: none;
+  font-size: clamp(2.6rem, 3.5vw, 3.5rem);
+  white-space: nowrap;
+}
+
+.hero-single .lede {
+  max-width: none;
+}
+
 .eyebrow {
   margin: 0 0 12px;
   color: var(--accent-deep);
@@ -545,6 +555,10 @@ a {
 
   .nav {
     justify-content: flex-start;
+  }
+
+  .hero-single h1 {
+    white-space: normal;
   }
 }
 
