@@ -120,6 +120,11 @@ a {
   font-size: 0.95rem;
 }
 
+.nav a[aria-current="page"] {
+  color: var(--ink);
+  font-weight: 700;
+}
+
 .lang-toggle {
   min-width: 72px;
   min-height: 42px;
