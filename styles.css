@@ -186,7 +186,9 @@ a {
 .hero-single h1 {
   max-width: none;
   font-size: clamp(2.6rem, 3.5vw, 3.5rem);
-  white-space: nowrap;
+  white-space: normal;
+  text-wrap: balance;
+  overflow-wrap: anywhere;
 }
 
 .hero-single .lede {
