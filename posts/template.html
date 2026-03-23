@@ -3,34 +3,80 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>文章标题 | IVY 187</title>
+    <title data-title-zh="文章标题 | IVY 187" data-title-en="Article Title | IVY 187">文章标题 | IVY 187</title>
+    <meta
+      name="description"
+      content="IVY 187 文章模板。"
+      data-description-zh="IVY 187 文章模板。"
+      data-description-en="IVY 187 article template."
+    />
     <link rel="stylesheet" href="../styles.css" />
   </head>
   <body class="article-page">
     <main class="article-shell">
-      <a class="article-back" href="../index.html">← 返回首页</a>
+      <div class="article-topbar">
+        <a class="brand article-brand" href="../index.html">
+          <img class="brand-mark" src="../assets/ivy187-mark.svg" alt="IVY 187 logo" />
+          <span class="brand-text">
+            <strong>IVY 187</strong>
+            <small>
+              <span data-lang-content="zh">电力 · 科技 · 投资 · 商业</span>
+              <span data-lang-content="en" hidden>Power · Tech · Investing · Business</span>
+            </small>
+          </span>
+        </a>
+        <div class="article-actions">
+          <a class="article-back" href="../index.html">
+            <span data-lang-content="zh">← 返回首页</span>
+            <span data-lang-content="en" hidden>← Back home</span>
+          </a>
+          <button class="lang-toggle" type="button" data-lang-toggle>EN</button>
+        </div>
+      </div>
 
       <header class="article-hero">
-        <p class="article-meta">YYYY.MM.DD · 分类</p>
-        <h1>文章标题</h1>
+        <p class="article-meta">
+          <span data-lang-content="zh">YYYY.MM.DD · 分类</span>
+          <span data-lang-content="en" hidden>YYYY.MM.DD · Category</span>
+        </p>
+        <h1>
+          <span data-lang-content="zh">文章标题</span>
+          <span data-lang-content="en" hidden>Article Title</span>
+        </h1>
       </header>
 
       <article class="article-content">
         <p>
-          把这里替换成导语。第一段最好说明这篇内容为什么存在，它要回应什么问题，或记录哪一件具体事情。
+          <span data-lang-content="zh">把这里替换成导语。第一段最好说明这篇内容为什么存在，它要回应什么问题，或记录哪一件具体事情。</span>
+          <span data-lang-content="en" hidden>Replace this paragraph with your lead. The first paragraph should explain why this piece exists, what problem it responds to, or what specific event it records.</span>
         </p>
 
-        <h2>小标题</h2>
+        <h2>
+          <span data-lang-content="zh">小标题</span>
+          <span data-lang-content="en" hidden>Subheading</span>
+        </h2>
         <p>
-          接着写正文。你可以继续使用段落、列表、链接，把内容组织成更容易阅读和引用的结构。
+          <span data-lang-content="zh">继续写正文。你可以使用段落、列表和链接，把内容组织成更容易阅读和引用的结构。如果你要做双语内容，就保留这套中英文对应节点继续填写。</span>
+          <span data-lang-content="en" hidden>Continue with the body. Use paragraphs, lists, and links to organize the piece into a structure that is easier to read and cite. If you want bilingual posts, keep this paired Chinese-English structure and fill in both sides.</span>
         </p>
 
         <ul>
-          <li>要点一</li>
-          <li>要点二</li>
-          <li>要点三</li>
+          <li>
+            <span data-lang-content="zh">要点一</span>
+            <span data-lang-content="en" hidden>Point one</span>
+          </li>
+          <li>
+            <span data-lang-content="zh">要点二</span>
+            <span data-lang-content="en" hidden>Point two</span>
+          </li>
+          <li>
+            <span data-lang-content="zh">要点三</span>
+            <span data-lang-content="en" hidden>Point three</span>
+          </li>
         </ul>
       </article>
     </main>
+
+    <script src="../script.js"></script>
   </body>
 </html>
